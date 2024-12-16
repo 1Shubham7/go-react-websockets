@@ -15,7 +15,7 @@ func main() {
 func serveWS(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
 	conn, err := websocket.Upgrade(w, r)
 	if err != nil {
-		fmt.Printf(w, "%+v\n", err)
+		fmt.Fprintf(w, "%+v\n", err)
 	}
 
 	client := &websocket.Client{
