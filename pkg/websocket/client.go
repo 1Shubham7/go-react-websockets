@@ -14,8 +14,8 @@ type Client struct {
 	mu   sync.Mutex
 }
 
-type Message struct{
-	Type int `json:"type"`
+type Message struct {
+	Type int    `json:"type"`
 	Body string `json:"body"`
 }
 
