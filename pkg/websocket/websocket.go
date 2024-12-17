@@ -21,6 +21,7 @@ func Upgrade(w http.ResponseWriter, r *http.Request) (*websocket.Conn, error) {
 		return true
 	}
 
+	// Upgrades the HTTP connection  to a WebSocket connection.
 	conn, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		fmt.Println(err)

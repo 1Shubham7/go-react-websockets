@@ -12,7 +12,7 @@ type Client struct {
 	ID   string
 	Conn *websocket.Conn // websocket conn for this client
 	Pool *Pool // reference to Pool which manages multiple clients
-	mu   sync.Mutex // mutex to protecct shared data, not used
+	mu   sync.Mutex // mutex to protect shared data, not used
 }
 
 type Message struct {
